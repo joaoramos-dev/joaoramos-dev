@@ -1,11 +1,17 @@
-<h1 align="center">João Pedro da Cunha Ramos</h1>
+<h1 align="center">
+  João Pedro da Cunha Ramos
+</h1>
 
 <p align="center">
-  <strong>Full-Stack Software Engineer | AI Engineer</strong>
+  <strong>
+    Full-Stack Software Engineer | AI Engineer
+  </strong>
 </p>
 
+<br>
+
 <p align="center">
-  Building scalable software, modern applications and AI-powered solutions.
+  <i>Building scalable applications, intelligent systems and AI-powered solutions.</i>
 </p>
 
 <br>
@@ -25,31 +31,6 @@
 </a>
 
 </div>
-
-<br>
-
----
-
-<h2 align="center">About Me</h2>
-
-<p align="center">
-Software Engineer focused on scalable systems and artificial intelligence applications.
-</p>
-
-<p align="center">  
-Experience building enterprise software, APIs, data migration solutions and modernizing legacy applications.
-</p>
-
-<p align="center">
-Currently focused on AI Engineering, exploring LLM applications, Retrieval-Augmented Generation (RAG), intelligent agents and automation workflows.
-</p>
-
-<p align="center">
-I enjoy understanding complex problems, designing reliable solutions and building software that creates real impact.
-</p>
-
-<br>
-
 
 ---
 
