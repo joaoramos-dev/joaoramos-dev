@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="880" height="700" viewBox="0 0 880 700" role="img" aria-labelledby="title description">
+<title id="title">João Pedro da Cunha Ramos — software, data and AI engineer</title>
+<desc id="description">A CRT-style terminal showing João’s introduction, live GitHub statistics, and links to GitHub and LinkedIn.</desc>
+<defs>
+<radialGradient id="screen" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#0C1F18"/><stop offset="0.7" stop-color="#07110D"/><stop offset="1" stop-color="#030605"/></radialGradient>
+<radialGradient id="vignette" cx="50%" cy="50%" r="72%"><stop offset="0.6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.7"/></radialGradient>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" fill-opacity="0.28"/></pattern>
+<filter id="glow" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="1.2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="880" height="700" fill="#020403"/>
+<rect x="12" y="12" width="856" height="676" rx="18" fill="url(#screen)" stroke="#1B3328" stroke-width="2"/>
+<g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', monospace" filter="url(#glow)">
+<text x="48" y="56" font-size="15" fill="#E6A65C">joaoramos@dev:~$ <tspan fill="#65D995">whoami</tspan></text>
+<text x="48" y="94" font-size="26" font-weight="700" fill="#65D995">João Pedro da Cunha Ramos</text>
+<text x="48" y="132" font-size="15" fill="#E6A65C">joaoramos@dev:~$ <tspan fill="#65D995">roles</tspan></text>
+<text x="48" y="160" font-size="16" fill="#9CC9A7">&gt; software engineer</text>
+<text x="48" y="184" font-size="16" fill="#9CC9A7">&gt; data engineer</text>
+<text x="48" y="208" font-size="16" fill="#9CC9A7">&gt; AI engineer</text>
+<text x="48" y="248" font-size="15" fill="#E6A65C">joaoramos@dev:~$ <tspan fill="#65D995">whatido</tspan></text>
+<text x="48" y="276" font-size="14" fill="#9CC9A7">I transform disorganized business data into software capable of running</text>
+<text x="48" y="298" font-size="14" fill="#9CC9A7">in a production environment, and I apply AI where it truly saves effort.</text>
+<text x="48" y="320" font-size="14" fill="#9CC9A7">Worlds are born from ideas, and quality of life is born from technology.</text>
+<text x="48" y="404" font-size="15" fill="#E6A65C">joaoramos@dev:~$ <tspan fill="#65D995">stats --user joaoramos-dev</tspan></text>
+<line x1="48" y1="420" x2="832" y2="420" stroke="#9CC9A7" stroke-opacity="0.2"/>
+<text x="48" y="454" font-size="11" letter-spacing="1.5" fill="#9CC9A7">AGE</text>
+<rect x="48" y="476" width="20" height="20" rx="5" fill="#0C1F18" stroke="#1B3328"/>
+<g transform="translate(50 478)" fill="none" stroke="#65D995" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5.5"/><path d="M8 4.5V8l2.5 1.5"/></g>
+<text x="75" y="494" font-size="28" fill="#65D995">-</text>
+<text x="204" y="454" font-size="11" letter-spacing="1.5" fill="#9CC9A7">REPOSITORIES</text>
+<rect x="204" y="476" width="20" height="20" rx="5" fill="#0C1F18" stroke="#1B3328"/>
+<g transform="translate(206 478)" fill="none" stroke="#65D995" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5h5l1.5 1.5H14v6H2z"/><path d="M2 5.5V4h5l1.5 1.5"/></g>
+<text x="231" y="494" font-size="28" fill="#E8F1EA">-</text>
+<text x="360" y="454" font-size="11" letter-spacing="1.5" fill="#9CC9A7">COMMITS</text>
+<rect x="360" y="476" width="20" height="20" rx="5" fill="#0C1F18" stroke="#1B3328"/>
+<g transform="translate(362 478)" fill="none" stroke="#65D995" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="4" r="1.5"/><circle cx="12" cy="12" r="1.5"/><path d="M5.5 4H8a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2"/></g>
+<text x="387" y="494" font-size="28" fill="#E8F1EA">-</text>
+<text x="516" y="454" font-size="11" letter-spacing="1.5" fill="#9CC9A7">STARS</text>
+<rect x="516" y="476" width="20" height="20" rx="5" fill="#0C1F18" stroke="#1B3328"/>
+<g transform="translate(518 478)" fill="none" stroke="#65D995" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m8 1.5 1.9 4 4.4.6-3.2 3.1.8 4.4L8 11.5l-3.9 2.1.8-4.4-3.2-3.1 4.4-.6z" fill="#65D995"/></g>
+<text x="543" y="494" font-size="28" fill="#E8F1EA">-</text>
+<text x="672" y="454" font-size="11" letter-spacing="1.5" fill="#9CC9A7">LINES ADDED</text>
+<rect x="672" y="476" width="20" height="20" rx="5" fill="#0C1F18" stroke="#1B3328"/>
+<g transform="translate(674 478)" fill="none" stroke="#65D995" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h10M3 8h6M3 12h10"/></g>
+<text x="699" y="494" font-size="28" fill="#E8F1EA">-</text>
+<text x="48" y="552" font-size="15" fill="#E6A65C">joaoramos@dev:~$ <tspan fill="#65D995">links</tspan></text>
+<a href="https://github.com/joaoramos-dev" xlink:href="https://github.com/joaoramos-dev"><text x="48" y="584" font-size="14" fill="#65D995">github.com/joaoramos-dev</text></a>
+<a href="https://linkedin.com/in/joaoramos-dev" xlink:href="https://linkedin.com/in/joaoramos-dev"><text x="320" y="584" font-size="14" fill="#65D995">linkedin.com/in/joaoramos-dev</text></a>
+<text x="48" y="624" font-size="15" fill="#E6A65C">joaoramos@dev:~$ <tspan fill="#65D995">update</tspan></text>
+<text x="48" y="656" font-size="15" fill="#9CC9A7">loading<tspan>.</tspan><tspan opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.333;0.667;1" calcMode="discrete" dur="1.8s" repeatCount="indefinite"/>.</tspan><tspan opacity="0"><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;0.333;0.667;1" calcMode="discrete" dur="1.8s" repeatCount="indefinite"/>.</tspan></text>
+</g>
+<rect x="12" y="12" width="856" height="676" rx="18" fill="url(#scan)" pointer-events="none"/>
+<rect x="12" y="12" width="856" height="676" rx="18" fill="url(#vignette)" pointer-events="none"/>
+</svg>
