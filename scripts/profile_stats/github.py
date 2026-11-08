@@ -3,22 +3,29 @@
 import json
 import re
 from typing import Any, Callable
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin
 from urllib.request import Request, urlopen
 
 from profile_stats.models import Repository
 
 API_URL = "https://api.github.com"
-REPOSITORIES_PATH = "/user/repos?affiliation=owner&visibility=all&per_page=100"
+AUTHENTICATED_REPOSITORIES_PATH = "/user/repos?affiliation=owner&visibility=all&per_page=100"
 
 
 class GitHubClient:
-    def __init__(self, token: str, opener: Callable[..., Any] = urlopen) -> None:
+    def __init__(self, user: str, token: str | None = None, opener: Callable[..., Any] = urlopen) -> None:
+        self._user = user
         self._token = token
         self._opener = opener
 
     def owned_repositories(self) -> list[Repository]:
-        repositories = self._paginate(REPOSITORIES_PATH)
+        if self._token:
+            path = AUTHENTICATED_REPOSITORIES_PATH
+        else:
+            username = quote(self._user, safe="")
+            path = f"/users/{username}/repos?type=owner&per_page=100"
+
+        repositories = self._paginate(path)
         return [
             Repository(
                 name=str(repository["name"]),
@@ -45,15 +52,14 @@ class GitHubClient:
         return items
 
     def _get(self, url: str) -> tuple[Any, str]:
-        request = Request(
-            url,
-            headers={
-                "Authorization": f"Bearer {self._token}",
-                "Accept": "application/vnd.github+json",
-                "X-GitHub-Api-Version": "2022-11-28",
-                "User-Agent": "profile-stats",
-            },
-        )
+        headers = {
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "profile-stats",
+        }
+        if self._token:
+            headers["Authorization"] = f"Bearer {self._token}"
+        request = Request(url, headers=headers)
         with self._opener(request, timeout=30) as response:
             return json.load(response), response.headers.get("Link", "")
 

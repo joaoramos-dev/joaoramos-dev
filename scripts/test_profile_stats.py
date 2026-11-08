@@ -50,7 +50,7 @@ class GitHubClientTests(unittest.TestCase):
             requests.append(request)
             return responses.pop(0)
 
-        repositories = GitHubClient("test-token", opener).owned_repositories()
+        repositories = GitHubClient("joao", "test-token", opener).owned_repositories()
 
         self.assertEqual(
             repositories,
@@ -60,7 +60,23 @@ class GitHubClientTests(unittest.TestCase):
             ],
         )
         self.assertEqual(len(requests), 2)
-        self.assertEqual(requests[0].get_header("Authorization"), "Bearer test-token")
+        self.assertIsNotNone(requests[0].get_header("Authorization"))
+
+    def test_uses_public_endpoint_without_token(self) -> None:
+        requests: list[Request] = []
+        response = FakeResponse([
+            {"name": "public", "full_name": "joao/public", "fork": False, "stargazers_count": 1},
+        ])
+
+        def opener(request: Request, timeout: int) -> FakeResponse:
+            requests.append(request)
+            return response
+
+        repositories = GitHubClient("joao", opener=opener).owned_repositories()
+
+        self.assertEqual(repositories, [Repository("public", "joao/public", 1)])
+        self.assertIn("/users/joao/repos?type=owner&per_page=100", requests[0].full_url)
+        self.assertIsNone(requests[0].get_header("Authorization"))
 
 
 class ProfileStatsTests(unittest.TestCase):

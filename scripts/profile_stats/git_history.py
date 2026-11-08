@@ -26,7 +26,7 @@ def count_added_lines(numstat: str) -> int:
 
 
 class GitHistoryAnalyzer:
-    def __init__(self, token: str, identities: Sequence[str]) -> None:
+    def __init__(self, token: str | None, identities: Sequence[str]) -> None:
         self._token = token
         self._identities = tuple(identity for identity in identities if identity)
         if not self._identities:
@@ -47,10 +47,13 @@ class GitHistoryAnalyzer:
         with tempfile.TemporaryDirectory() as temporary_directory:
             for repository in repositories:
                 destination = Path(temporary_directory) / repository.name
-                remote = (
-                    f"https://x-access-token:{self._token}@github.com/"
-                    f"{repository.full_name}.git"
-                )
+                if self._token:
+                    remote = (
+                        f"https://x-access-token:{self._token}@github.com/"
+                        f"{repository.full_name}.git"
+                    )
+                else:
+                    remote = f"https://github.com/{repository.full_name}.git"
                 self._run_git(
                     ["clone", "--quiet", "--no-tags", remote, str(destination)],
                     repository,

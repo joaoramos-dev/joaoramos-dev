@@ -30,9 +30,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     if args.placeholder:
         stats = ProfileStats(age=None, repositories=None, commits=None, stars=None, lines_added=None)
     else:
-        if settings.token is None:
-            parser.error("GH_TOKEN is required unless --placeholder is used")
-        github = GitHubClient(settings.token)
+        github = GitHubClient(settings.user, settings.token)
         history = GitHistoryAnalyzer(settings.token, settings.identities)
         stats = ProfileStatsService(github, history).collect(settings.birth_date)
 
